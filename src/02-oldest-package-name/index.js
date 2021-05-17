@@ -39,10 +39,6 @@ module.exports = async function oldestPackageName() {
   const oldestDate = allPackageDates.reduce((a, b) => {
     return a < b ? a : b;
   });
-
-  const oldestDateIndex = data
-    .map(url => url.package.date)
-    .map(x => x.slice(0, 24))
-    .indexOf(oldestDate);
+  const oldestDateIndex = allPackageDates.indexOf(oldestDate);
   return data.map(url => url.package.name)[oldestDateIndex];
 };
