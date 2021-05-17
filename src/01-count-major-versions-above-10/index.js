@@ -22,6 +22,8 @@ The results should have this structure:
     ]
 }
 
+// Test
+
  ******
 
  *  With the results from this request, inside "content", count
@@ -32,5 +34,5 @@ The results should have this structure:
 module.exports = async function countMajorVersionsAbove10() {
   // TODO
 
-  return count
+  return count;
 };
